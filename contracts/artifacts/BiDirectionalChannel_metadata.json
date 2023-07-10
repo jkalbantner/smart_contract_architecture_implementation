@@ -1,0 +1,391 @@
+{
+	"compiler": {
+		"version": "0.8.6+commit.11564f7e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address payable[2]",
+						"name": "_users",
+						"type": "address[2]"
+					},
+					{
+						"internalType": "uint256[2]",
+						"name": "_balances",
+						"type": "uint256[2]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_expiresAt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_challengePeriod",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "nonce",
+						"type": "uint256"
+					}
+				],
+				"name": "ChallengeExit",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "Deposit",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "expiresAt",
+						"type": "uint256"
+					}
+				],
+				"name": "ExpiresAtChanged",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "Withdraw",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "balances",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[2]",
+						"name": "_balances",
+						"type": "uint256[2]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_nonce",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes[2]",
+						"name": "_signatures",
+						"type": "bytes[2]"
+					}
+				],
+				"name": "challengeExit",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "challengePeriod",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "expiresAt",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "isUser",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "nonce",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_newExpiresAt",
+						"type": "uint256"
+					}
+				],
+				"name": "setExpiresAt",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "users",
+				"outputs": [
+					{
+						"internalType": "address payable",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes[2]",
+						"name": "_signatures",
+						"type": "bytes[2]"
+					},
+					{
+						"internalType": "address",
+						"name": "_contract",
+						"type": "address"
+					},
+					{
+						"internalType": "address[2]",
+						"name": "_signers",
+						"type": "address[2]"
+					},
+					{
+						"internalType": "uint256[2]",
+						"name": "_balances",
+						"type": "uint256[2]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_nonce",
+						"type": "uint256"
+					}
+				],
+				"name": "verify",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/BiDirectionalChannel.sol": "BiDirectionalChannel"
+		},
+		"evmVersion": "berlin",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/access/Ownable.sol": {
+			"keccak256": "0xa94b34880e3c1b0b931662cb1c09e5dfa6662f31cba80e07c5ee71cd135c9673",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://40fb1b5102468f783961d0af743f91b9980cf66b50d1d12009f6bb1869cea4d2",
+				"dweb:/ipfs/QmYqEbJML4jB1GHbzD4cUZDtJg5wVwNm3vDJq1GbyDus8y"
+			]
+		},
+		"@openzeppelin/contracts/utils/Context.sol": {
+			"keccak256": "0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92",
+				"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3"
+			]
+		},
+		"@openzeppelin/contracts/utils/Strings.sol": {
+			"keccak256": "0xa4d1d62251f8574deb032a35fc948386a9b4de74b812d4f545a1ac120486b48a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8c969013129ba9e651a20735ef659fef6d8a1139ea3607bd4b26ddea2d645634",
+				"dweb:/ipfs/QmVhVa6LGuzAcB8qgDtVHRkucn4ihj5UZr8xBLcJkP6ucb"
+			]
+		},
+		"@openzeppelin/contracts/utils/cryptography/ECDSA.sol": {
+			"keccak256": "0xda898fa084aa1ddfdb346e6a40459e00a59d87071cce7c315a46d648dd71d0ba",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ce501a941f4aa1555c04dabb5e07992503bb6a9b32ff8f7cdcefdb4a742210cb",
+				"dweb:/ipfs/QmeScPrUpdrGYs9BytV3Z5ZWJcBXtuAgCW4BLHua4xFUxx"
+			]
+		},
+		"@openzeppelin/contracts/utils/math/Math.sol": {
+			"keccak256": "0xa1e8e83cd0087785df04ac79fb395d9f3684caeaf973d9e2c71caef723a3a5d6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://33bbf48cc069be677705037ba7520c22b1b622c23b33e1a71495f2d36549d40b",
+				"dweb:/ipfs/Qmct36zWXv3j7LZB83uwbg7TXwnZSN1fqHNDZ93GG98bGz"
+			]
+		},
+		"contracts/BiDirectionalChannel.sol": {
+			"keccak256": "0x3ef26d1d125d8cda388014d7cec53783ac47b8b758bf9c5f3e960a45a03287ac",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://dc8cc4c1842745a9d4eec75a712215bb8d0381005b5ce90abc38c403e0a133df",
+				"dweb:/ipfs/QmRyoh6WTVeXrhpacndvUoWN6UBj3fiA2kzmEpEi2JywGM"
+			]
+		},
+		"contracts/Marketplace.sol": {
+			"keccak256": "0xf2f4197105942579af5407508ad2a1a31af45c97907ef9b4a7d30dfeda239d8e",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://c1f876ae26513f7787ba88864211b834094d0a054449c1d1ab4dfd4d43c0c692",
+				"dweb:/ipfs/QmT6sRffLEJQZEdM6FmWaNSkMByH3uujs2mUsJqXQxL6fA"
+			]
+		},
+		"contracts/Product.sol": {
+			"keccak256": "0x9179700c1dac2d85578ab0c34e3c14600208f918fbfbd4f1c6147dccab3a7c92",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://02be25e206a34b00e86c302a6009f56a1d81f398b38ced9a06a2275a3768ec98",
+				"dweb:/ipfs/QmUiqit97Yk3kC1Sg7VbBw5snRvMaEmJwAamKcEaq7K56t"
+			]
+		},
+		"hardhat/console.sol": {
+			"keccak256": "0x60b0215121bf25612a6739fb2f1ec35f31ee82e4a8216c032c8243d904ab3aa9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6e29880d33dd479bb046ba306993d26ccb779a4b1d94a046cb3567f22948bb4d",
+				"dweb:/ipfs/QmfTY1qzPt5C63Wc7y6JqfZr5899NRvXYdCpyLzR5FXQic"
+			]
+		}
+	},
+	"version": 1
+}
