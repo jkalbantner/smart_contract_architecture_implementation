@@ -1,3 +1,18 @@
+## README
+
+License: CC-BY-4.0
+
+This repository contains the Solidity code for the article: J. Kalbantner et al., "A DLT-based Smart Contract Architecture for Atomic and Scalable Trading: A Smart Grid Use-Case". Complete list of authors: J. Kalbantner, K. Markantonakis, D. Hurley-Smith, C. Shepherd, and B. Semal
+
+The implementation includes three main contracts (Marketplace, Product, BiDirectionalChannel) which implement the logic needed for a test-driven evaluation:
+- With the marketplace contract a product can be created
+- The product contract is then used to create a BiDirectionalChannel (a state channel used for trading)
+- One can also directly create a state channel by calling the BiDirectionalChannel contract
+
+For greater detail regarding the test-driven evaluation we would like to refer to the article mentioned above.
+
+Also see the scyther evaluation which can be found [here](https://github.com/jkalbantner/smart_contract_architecture_scyther).
+
 ## Usage
 
 ### Pre Requisites
