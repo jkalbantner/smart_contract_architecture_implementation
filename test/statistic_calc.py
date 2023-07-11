@@ -43,6 +43,8 @@ def print_statistics(data_array, dir, name, file_extension):
 
         print(f"Mean: {calculate_mean(data):.2f}")
         print(f"Median: {calculate_median(data):.2f}")
+        print(f"Minumum: {min(data):.2f}")
+        print(f"Maximum: {max(data):.2f}")
         print(f"Standard Deviation: {calculate_standard_deviation(data):.2f}")
         print(f"Variance: {calculate_variance(data):.2f}")
 
